@@ -30,7 +30,7 @@ def build_docs():
         app.logger.info('Building docs')
         subprocess.check_call(['make', 'html'], cwd=DOCS_DIR)
     except subprocess.CalledProcessError:
-        app.logger.warn('Couldn\'t build docs')
+        app.logger.warning('Couldn\'t build docs')
 
 if __name__ == '__main__':
     app.run(port=4547)
