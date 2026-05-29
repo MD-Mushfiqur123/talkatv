@@ -1,0 +1,42 @@
+{#
+ # talkatv - Commenting backend for static pages
+ # Copyright (C) 2012  talkatv contributors, see AUTHORS
+ # 
+ # This program is free software: you can redistribute it and/or modify
+ # it under the terms of the GNU Affero General Public License as
+ # published by the Free Software Foundation, either version 3 of the
+ # License, or (at your option) any later version.
+ # 
+ # This program is distributed in the hope that it will be useful,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ # GNU Affero General Public License for more details.
+ # 
+ # You should have received a copy of the GNU Affero General Public License
+ # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ #}
+
+{% extends "talkatv/base.html" %}
+{% set active_page = 'register' %}
+{% import "bootstrap_wtf.html" as wtf %}
+{% block title %}Register - desqus{% endblock %}
+{% block talkatv_body %}
+<div class="page-header">
+    <h1>Register</h1>
+</div>
+<div class="row">
+    <div class="span6">
+        <p>
+        Quisque condimentum turpis in leo posuere eleifend. Ut consectetur leo quis orci feugiat pellentesque. Integer odio enim, tristique commodo sodales in, ullamcorper eget lacus. Maecenas ante arcu, suscipit aliquam posuere vel, suscipit eu neque. Aenean tellus turpis, commodo ornare ullamcorper at, tincidunt sit amet tortor. Cras pharetra elementum egestas.
+        </p>
+    </div>
+    <div class="span6">
+        <div class="well">
+            {{ wtf.quick_form(
+                    form,
+                    action=url_for('register'),
+                    buttons=[('submit', 'primary', 'Register')]) }}
+        </div>
+    </div>
+</div>
+{% endblock %}

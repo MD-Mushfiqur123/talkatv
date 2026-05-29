@@ -1,0 +1,45 @@
+/docs/build
+desqus.db
+/*_local*
+
+# Sphinx apidoc
+/docs/source/api
+
+# Virtualenv
+/local
+/include
+/lib
+
+# Python binary files
+*.py[co]
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+
+# Lesser VCSes
+.svn
+.hg
+
+#Translations
+*.mo
+
+#Mr Developer
+config.py
+.mr.developer.cfg
